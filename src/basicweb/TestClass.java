@@ -25,5 +25,12 @@ public class TestClass {
         Thread.sleep(3000);
 
         driver.findElement(By.partialLinkText("Pract")).click();
+
+        driver.findElement(By.className("btn-style")).click();
+        driver.findElement(By.className("inputtext")).sendKeys("Automation");
+        driver.findElement(By.className("uiButtonConfirm")).click();
+        driver.findElement(By.tagName("a")).click();
+
+
     }
 }
