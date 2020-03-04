@@ -32,6 +32,11 @@ class NavigatingBetweenPages {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
+    @AfterEach
+    void tearDown() throws Exception {
+        driver.quit();
+    }
+
     @Test
     void test() throws InterruptedException {
         driver.get(baseUrl);
@@ -75,11 +80,6 @@ class NavigatingBetweenPages {
 
         String pageSource = driver.getPageSource();
         System.out.println(pageSource);
-    }
-
-    @AfterEach
-    public void tearDown() throws Exception {
-        driver.quit();
     }
 }
 
