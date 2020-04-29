@@ -3,9 +3,9 @@ package web.com;
 import java.util.concurrent.TimeUnit;
 import java.util.*;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +16,7 @@ public class MultipleSelect {
     private WebDriver driver;
     private String baseUrl;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         driver = new FirefoxDriver();
         baseUrl = "https://letskodeit.teachable.com/p/practice";
@@ -60,7 +60,7 @@ public class MultipleSelect {
         sel.deselectAll();
     }
 
-    @After
+    @AfterEach
     public void tearDown() throws Exception {
         Thread.sleep(2000);
         driver.quit();
