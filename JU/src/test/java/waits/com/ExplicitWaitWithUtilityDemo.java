@@ -33,6 +33,8 @@ public class ExplicitWaitWithUtilityDemo {
         WebElement emailField = wt.waitForElement(By.id("user_email"), 3);
         emailField.sendKeys("test");
 
+        wt.clickWhenReady(By.name("commit"), 3);
+
         //driver.findElement(By.id("user_email")).sendKeys("test");
     }
 
