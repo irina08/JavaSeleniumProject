@@ -44,5 +44,6 @@ public class JavaScriptExecution {
 
     @AfterEach
     public void tearDown() throws Exception {
+        driver.quit();
     }
 }
